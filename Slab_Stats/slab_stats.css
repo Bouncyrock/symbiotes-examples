@@ -1,0 +1,121 @@
+body {
+    background-color: var(--ts-background-primary);
+    color: var(--ts-color-primary);
+    font-family: 'OptimusPrinceps', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+}
+
+label, p {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4%;
+    margin-bottom: 0.8em;
+}
+
+.card {
+    background-color: var(--ts-background-secondary);
+    border: 1px solid var(--ts-accessibility-border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+    padding: 5px;
+}
+
+.card:hover {
+    background-color: var(--ts-background-primary);
+    transition: ease-in-out 0.2s;
+}
+
+.card:focus-visible {
+    outline: 3px solid var(--ts-accessibility-focus);
+    outline-offset: -1px;
+    background-color: var(--ts-background-primary);
+    transition: outline-color 0s;
+}
+
+.asset-details {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    gap: 0.5em;
+}
+
+.asset-details > .content-row {
+    margin-bottom: 0;
+}
+
+.asset-name {
+    font-size: 1.4em;
+}
+
+.asset-id {
+    font-size: 1em;
+}
+
+.card:hover .copy-icon, .card:focus-visible .copy-icon {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.copy-icon {
+    height: 32px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.label-desc {
+    color: var(--ts-color-secondary);
+}
+
+.hidden {
+    display: none;
+}
+
+#slab-size {
+    margin-right: -2%;
+}
+
+/*scrollbar styling*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ts-background-primary);
+    transition: ease-in-out 0.1s;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.2s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.1s;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ts-color-secondary);
+    transition: ease-in-out 0.2s;
+}

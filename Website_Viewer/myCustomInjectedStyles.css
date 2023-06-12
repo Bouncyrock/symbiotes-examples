@@ -1,0 +1,10 @@
+#cool-custom-id-for-custom-injected-element {
+    position: fixed;
+    top: 3%;
+    right: 5%;
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 4px;
+    color: white;
+    padding: 0.5em;
+}

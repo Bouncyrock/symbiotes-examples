@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Sheet</title>
+    <link rel="stylesheet" href="generic_sheet.css">
+    <script src="generic_sheet.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-row">
+            <label class="field-title">PC</label><input id="character-name" type="text" class="field-data"></input><p class="field-desc">Character name</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Class</label><input id="class" type="text" class="field-data"></input><p class="field-desc"></p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">AL</label><input id="alignment" type="text" class="field-data"></input><p class="field-desc">Alignment</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Level</label><input id="level" type="number" class="field-data"></input><p class="field-desc"></p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Exp</label><input id="cur-exp" type="number" class="field-data"></input><p class="field-desc">Experience Points</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Next</label><input id="next-lvl-exp" type="number" class="field-data"></input><p class="field-desc">Exp to next level</p>
+        </div>
+    </div>
+    <div class="container columns-2">
+        <div class="container">
+            <h1>Stats</h1>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Strength">STR</label><input id="str" type="number" class="field-data-short"></input>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Intelligence">INT</label><input id="int" type="number" class="field-data-short"></input>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Wisdom">WIS</label><input id="wis" type="number" class="field-data-short"></input>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Dexterity">DEX</label><input id="dex" type="number" class="field-data-short"></input>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Constitution">CON</label><input id="con" type="number" class="field-data-short"></input>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Charisma">CHA</label><input id="cha" type="number" class="field-data-short"></input>
+            </div>
+            <label class="field-desc">Values from 0-20</label>
+        </div>
+        <div class="container">
+            <h1>Saving Throws</h1>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Strength">STR</label><input id="save-strength" type="number" class="field-data-short"></input><p class="field-desc">Resist being Moved</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Intelligence">INT</label><input id="save-intelligence" type="number" class="field-data-short"></input><p class="field-desc">Spells</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Wisdom">WIS</label><input id="save-wisdom" type="number" class="field-data-short"></input><p class="field-desc">Resist Mindcontrol</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Dexterity">DEX</label><input id="save-dex" type="number" class="field-data-short"></input><p class="field-desc">Dodge</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Constitution">CON</label><input id="save-constitution" type="number" class="field-data-short"></input><p class="field-desc">Poison</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Charisma">CHA</label><input id="save-charisma" type="number" class="field-data-short"></input><p class="field-desc">Charmed</p>
+            </div>
+        </div>
+    </div>
+    <div class="container columns-2">
+        <div class="content-row" style="width: 100%">
+            <h1>Combat</h1>
+        </div>
+        <div class="container">
+            <div class="content-row">
+                <button id="att-melee" class="field-data" data-modifier="melee-mod" data-dice-type="d20" data-label="Melee Attack"><i class="ts-icon-d20 ts-icon-small" style="margin-right: 0.2em;"></i>Melee Attack</button>
+            </div>
+            <div class="content-row">
+                <button id="att-range" class="field-data" data-modifier="dex-mod-missile" data-dice-type="d20" data-label="Ranged Attack"><i class="ts-icon-d20 ts-icon-small" style="margin-right: 0.2em;"></i>Ranged Attack</button>
+            </div>
+            <div class="content-row">
+                <label class="field-title">HP</label><input id="hp" type="number" class="field-data-short"></input><p class="field-desc">Hit points</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title">Max</label><input id="max-hp" type="number" class="field-data-short"></input><p class="field-desc">Maximum hit points</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title">&plusmn;</label><input id="con-mod" type="number" class="field-data-short"></input><p class="field-desc">CON modifier to hit points</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d6" data-label="Initiative">Init</label><input id="init" type="number" class="field-data-short"></input><p class="field-desc">DEX Modifier to initiative (optional)</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content-row">
+                <label class="field-title">AC</label><input id="ac" type="number" class="field-data-short"></input><p class="field-desc">Armour Class</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title">UN</label><input id="unarmoured-ac" type="number" class="field-data-short"></input><p class="field-desc">Unarmoured AC</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title">&plusmn;</label><input id="dex-mod-ac" type="number" class="field-data-short"></input><p class="field-desc">DEX modifier to Armour Class</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title">Rng</label><input id="dex-mod-missile" type="number" class="field-data-short"></input><p class="field-desc">DEX modifier to ranged attacks</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title">Mel</label><input id="melee-mod" type="number" class="field-data-short"></input><p class="field-desc">STR modifier to melee attacks</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title" data-dice-type="1d4" data-label="Encourage">Enc</label><input id="encouraged" type="checkbox" class="field-data-short"></input><p class="field-desc">Encouraged</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 id="abilities-section">Abilities, Skills, Weapons</h1>
+        <template id="abilities-template">
+            <div class="content-row">
+                <label id="abilities-template-title" class="ability-title">Action Title</label><button id="abilities-template-button" data-modifier="no-mod" data-dice-type="" data-label=""><i class="ts-icon-sword-crossed ts-icon-small" style="margin-right: 0.2em;"></i>Roll Damage</button><p id="abilities-template-desc" class="ability-desc">Action description</p>
+            </div>
+        </template>
+        <div class="content-row">
+            <textarea id="abilities-text" aria-labelledby="abilities-section"></textarea>
+        </div>
+    </div>
+    <div class="container columns-2">
+        <div class="content-row" style="width: 100%">
+            <h1>Movement</h1>
+        </div>
+        <div class="container">
+            <div class="content-row">
+                <label class="field-title">Tr</label><input id="move-overland" type="number" class="field-data-short"></input><p class="field-desc">Overland Travel (miles/day)</p>
+            </div>
+            <div class="content-row">
+                <label class="field-title">En</label><input id="move-encounter" type="number" class="field-data-short"></input><p class="field-desc">Encounter Speed (feet/round)</p>
+            </div>
+        </div>
+        <div class="container">
+        </div>
+    </div>
+    <div class="container">
+        <h1 id="languages-section">Languages</h1>
+        <div class="content-row">
+            <textarea id="languages-text" aria-labelledby="languages-section"></textarea>
+        </div>
+        <div class="content-row" style="gap: 1%">
+            <input id="literate" type="checkbox"></input><p class="field-desc">Literate</p>
+        </div>
+    </div><div class="container">
+        <h1>Inventory</h1>
+        <div class="content-row">
+            <textarea id="inventory-text"></textarea>
+        </div>
+    </div>
+    <div class="content-row" style="margin-bottom: 0">
+        <span style="flex-grow: 1"></span>
+        <button id="clear-storage" class="" style="margin: 3em 0 0 0" onclick="clearSheet()" disabled>Character Sheet Empty</button>
+    </div>
+</body>
+</html>

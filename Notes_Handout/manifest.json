@@ -1,0 +1,38 @@
+{
+  "manifestVersion": 1,
+  "name": "Notes Handout",
+  "summary": "A symbiote for handing out stylized notes and images",
+  "entryPoint": "/notes.html",
+  "descriptionFilePath": "/readme.md",
+  "api": {
+    "version": "0.1",
+    "initTimeout": 10,
+    "subscriptions": {
+      "sync": {
+        "onSyncMessage": "handleSyncEvents"
+      },
+      "clients": {
+        "onClientEvent": "handleClientEvents"
+      },
+      "players": {
+        "onCampaignPlayerEvent": "handlePlayerPermissionEvents"
+      },
+      "symbiote": {
+        "onStateChangeEvent": "onStateChangeEvent"
+      }
+    },
+    "interop": {
+      "id": "0a6c848a-c4e7-495b-bb5f-efb8e47b7e02"
+    }
+  },
+  "environment": {
+    "webViewBackgroundColor": "#000000",
+    "capabilities": [
+      "runInBackground"
+    ],
+    "extras": [
+      "fonts",
+      "colorStyles"
+    ]
+  }
+}

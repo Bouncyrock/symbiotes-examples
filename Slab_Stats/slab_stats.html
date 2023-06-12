@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slab Stats</title>
+    <link rel="stylesheet" href="slab_stats.css">
+    <script src="slab_stats.js"></script>
+</head>
+
+<body>
+    <h1 style="margin-top: 0">Slab Data</h1>
+    <div class="content-row">
+        <label class="label-desc">Size:</label><p id="slab-size">0</p><label class="label-desc">/ 30720B</label>
+    </div>
+    <div class="content-row">
+        <label class="label-desc">Unique Assets:</label><p id="nr-unique">0</p>
+    </div>
+    <div class="content-row">
+        <label class="label-desc">Total Assets:</label><p id="nr-assets">0</p>
+    </div>
+    <h1>Assets</h1>
+    <template id="asset-template">
+        <div class="content-row card" onclick="clickCard(this)" tabindex="0">
+            <span class="asset-details">
+                <p class="asset-name">Name</p>
+                <div class="content-row">
+                    <label class="label-desc">Count:</label><p class="asset-count">0</p>
+                </div>
+                <div class="content-row">
+                    <label class="label-desc" style="font-size: 1em">ID:</label><p class="asset-id">0</p>
+                </div>
+            </span>
+            <span class="copy-icon">
+                <i class="ts-icon-copy"></i>
+            </span>
+        </div>
+    </template>
+    <div id="asset-list-container">
+    </div>
+</body>
+</html>

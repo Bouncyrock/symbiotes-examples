@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <script src="chat.js"></script>
+</head>
+
+<body>
+    <h1 style="margin-top: 0">Chat</h1>
+    <div class="content-row">
+        <textarea id="chat-input" placeholder="Chat Message" maxlength="370"></textarea>
+    </div>
+    <div class="content-row">
+        <label class="label-desc" for="send-language">Language: </label><select id="send-language" name="send-language"></select><button onclick="sendMessage()">Send</button>
+    </div>
+    <h1>Players</h1>
+    <p id="no-players-label" class="label-desc">No Players Online</p>
+    <template id="player-template">
+        <div class="content-row">
+            <label class="player-name"></label><span class="player-languages-container"></span>
+        </div>
+    </template>
+    <template id="player-language-template">
+        <div class="content-row" style="gap: 2%">
+            <p class="language-select-name"></p>
+            <input id="" type="radio" name="testradio" value="unknown" style="margin: auto 0 auto 0" onchange="updatePlayerLanguages(event)"></input><label for="" class="label-desc" style="margin-top: 0.1em">Unknown</label>
+            <input id="" type="radio" name="testradio" value="known" style="margin: auto 0 auto 5%" onchange="updatePlayerLanguages(event)"></input><label for="" class="label-desc" style="margin-top: 0.1em">Fluent</label>
+        </div>
+    </template>
+    <div id="players-container"></div>
+    <h1>Languages</h1>
+    <template id="language-template">
+        <div class="content-row">
+            <p class="language"></p><span style="flex-grow: 1"></span><button class="secondary-button" onclick="removeLanguage(event)">Delete</button>
+        </div>
+    </template>
+    <div id="languages-container"></div>
+    <p id="no-languages-label" class="label-desc">No Languages</p>
+    <div class="language-entry content-row">
+        <input id="new-language-input" type="text" placeholder="New Language Name"></input><button id="add-language-button"onclick="addLanguageFromUI()">Add</button>
+    </div>
+</body>
+</html>

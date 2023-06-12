@@ -1,0 +1,268 @@
+body {
+    background-color: var(--ts-background-primary);
+    color: var(--ts-color-primary);
+    font-family: 'OptimusPrinceps', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
+    cursor: default;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.columns-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 0.4em;
+}
+
+.field-title {
+    text-align: center;
+    flex-shrink: 0;
+    font-size: 1.2em;
+    width: 2.5em;
+    color: var(--ts-color-secondary);
+}
+
+.interactible-title {
+    transition: ease-in-out 0.1s;
+}
+
+.interactible-title:hover {
+    color: var(--ts-accent-primary);
+    transition: ease-in-out 0.2s;
+}
+
+.field-data {
+    flex-grow: 1;
+    min-width: 50px;
+}
+
+.field-data-short {
+    width: 3em;
+}
+
+.field-desc {
+    font-size: 0.7em;
+    font-style: italic;
+    flex-grow: 1;
+    flex: 1;
+    max-width: 150px;
+    color: var(--ts-color-secondary);
+}
+
+.ability-title {
+    color: var(--ts-color-secondary);
+}
+
+.ability-desc {
+    font-size: 1em;
+    font-style: italic;
+    color: var(--ts-color-secondary);
+}
+
+.ability-data {
+    max-width: 10em;
+}
+
+.chance-input-container {
+    width: 6.4em;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.chance-data-field {
+    width: 3em;
+    border-right: none;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.chance-input-container > .chance-data-field, .chance-input-container > .chance-label {
+    background-color: var(--ts-background-secondary);
+    transition: ease-in-out 0.1s
+}
+
+.chance-input-container:hover > .chance-data-field, .chance-input-container:hover > .chance-label {
+    background-color: var(--ts-background-primary);
+    transition: ease-in-out 0.2s
+}
+
+.chance-label {
+    font-size: 0.9em;
+    width: 3em;
+    height: 25px;
+    text-align: center;
+    line-height: 1.7em;
+    background-color: var(--ts-background-secondary);
+    border: none;
+    color: var(--ts-color-secondary);
+    border-radius: 0px 4px 4px 0px;
+}
+
+.thac0 {
+    flex: 1;
+    max-width: 2.5em;
+    font-size: 1.2em;
+    border: 1px solid var(--ts-color-secondary);
+    border-right: none;
+}
+
+button, input {
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-primary);
+    font-family: 'OptimusPrinceps', sans-serif;
+
+    border: 1px solid var(--ts-accessibility-border);
+    border-radius: 4px;
+    font-size: 1.2em;
+
+    transition: ease-in-out 0.1s;
+}
+
+input:disabled {
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-secondary);
+}
+
+button:hover, input:hover {
+    background-color: var(--ts-background-primary);
+    transition: ease-in-out 0.2s;
+}
+
+button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--ts-accessibility-focus);
+    outline-offset: -1px;
+    background-color: var(--ts-background-primary);
+    transition: outline-color 0s;
+}
+
+button {
+    background-color: var(--ts-button-background);
+}
+
+button:disabled, button:disabled:hover {
+    background-color: var(--ts-background-tertiary);
+    color: var(--ts-color-secondary);
+}
+
+button:hover, button.interactible-title:hover {
+    background-color: var(--ts-button-hover);
+    color: var(--ts-color-primary);
+}
+
+button:focus-visible {
+    background-color: var(--ts-button-hover);
+}
+
+textarea {
+    flex-grow: 1;
+    min-height: 5em;
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-primary);
+    font-size: 1em;
+    font-family: 'OptimusPrinceps', sans-serif;
+
+    border: 1px solid var(--ts-accessibility-border);
+    border-radius: 4px;
+
+    transition: ease-in-out 0.1s;
+}
+
+textarea:hover {
+    background-color: var(--ts-background-secondary);
+    transition: ease-in-out 0.2s;
+}
+
+textarea:focus-visible {
+    outline: 3px solid var(--ts-accessibility-focus);
+    outline-offset: -1px;
+    transition: outline-color 0s;
+}
+
+button.danger {
+    background-color: var(--ts-background-tertiary);
+}
+
+button.danger:hover {
+    background-color: var(--ts-color-danger);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#thac0-matrix {
+    gap: 0%;
+}
+
+#thac0-matrix > .field-title {
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-secondary);
+}
+
+#thac0-matrix > .field-data-short {
+    text-align: center;
+}
+
+#thac0-matrix > .first {
+    border-radius: 4px 0px 0px 4px;
+    border-left: 1px solid var(--ts-color-secondary);
+}
+
+#thac0-matrix > .last {
+    border-radius: 0px 4px 4px 0px;
+    border-right: 1px solid var(--ts-color-secondary);
+}
+
+/*scrollbar styling*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ts-background-primary);
+    transition: ease-in-out 0.1s;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.2s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.1s;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ts-color-secondary);
+    transition: ease-in-out 0.2s;
+}
+
+/*number input styling*/
+input[type=number]::-webkit-inner-spin-button {
+    color-scheme: dark;
+}
+

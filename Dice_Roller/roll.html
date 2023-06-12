@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="roll.css">
+    <script src="roll.js"></script>
+</head>
+
+<body>
+    <h1 style="margin-top: 0">Dice Roll</h1>
+    <div class="content-row">
+        <label class="field-title" for="roll-name">Label</label><input id="roll-name" placeholder="Check"></input>
+    </div>
+    <div class="content-row">
+        <label class="field-title" for="roll-content">Dice</label><input id="roll-content" placeholder="1d20"></input>
+    </div>
+    <div class="content-row">
+        <span class="spacer"></span><button id="roll-adv" onclick="roll('advantage')">Roll Advantage</button>
+    </div>
+    <div class="content-row">
+        <span class="spacer"></span><button id="roll-dis" onclick="roll('disadvantage')">Roll Disadvantage</button>
+    </div>
+</body>
+</html>

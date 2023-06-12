@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selection Info</title>
+    <link rel="stylesheet" href="selection.css">
+    <script src="selection.js"></script>
+</head>
+
+<body>
+    <h1 style="margin-top: 0">Selection</h1>
+    <button id="get-selection-button" class="get-selection">Get Selection</button>
+    <div id="selection-empty-note" class="content-row"><p>Empty</p></div>
+    <div id="summary-section" class="hidden">
+        <div class="content-row">
+            <label class="label-desc">Number Creatures:</label><p id="nr-creatures">0</p>
+        </div>
+        <div class="content-row">
+            <label class="label-desc">Group HP:</label><p id="group-hp">0</p><i style="margin-left: -1em;" class="ts-icon-heart ts-icon-small"></i>
+        </div>
+        <div class="content-row">
+            <label class="label-desc">Furthest Distance:</label><p id="distance">0</p>
+        </div>
+    </div>
+    <template id="creature-template">
+        <div class="content-row card" onclick="clickCard(this)" tabindex="0">
+            <span class="creature-details">
+                <h2 class="creature-name">Name</h2>
+                <div class="content-row">
+                    <label class="label-desc">HP:</label><p class="creature-hp">0</p>
+                </div>
+            </span>
+            <span class="copy-icon">
+                <i class="ts-icon-copy"></i>
+            </span>
+        </div>
+    </template>
+    <div id="individuals-section" class="hidden">
+        <h2>Individuals</h2>
+        <div id="individuals-container"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "manifestVersion": 1,
+    "name": "Minimal Website Viewer",
+    "entryPoint": "https://app.demiplane.com/nexus/pathfinder2e"
+}

@@ -1,0 +1,25 @@
+{
+  "manifestVersion": 1,
+  "name": "Dice Roller",
+  "summary": "A Symbiote to roll dice with advantage or disadvantage",
+  "entryPoint": "/roll.html",
+  "descriptionFilePath": "/readme.md",
+  "api": {
+    "version": "0.1",
+    "subscriptions": {
+      "dice": {
+        "onRollResults": "handleRollResult"
+      }
+    }
+  },
+  "environment": {
+    "webViewBackgroundColor": "#000000",
+    "capabilities": [
+      "runInBackground"
+    ],
+    "extras": [
+      "fonts",
+      "colorStyles"
+    ]
+  }
+}

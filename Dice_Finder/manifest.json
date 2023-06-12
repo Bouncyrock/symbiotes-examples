@@ -1,0 +1,18 @@
+{
+  "manifestVersion": 1,
+  "name": "Web Dice Finder",
+  "entryPoint": "https://app.demiplane.com/nexus/pathfinder2e/creatures",
+  "api": {
+    "version": "0.1"
+  },
+  "environment": {
+    "extras": [
+      "diceFinder",
+      "/dice_finder_optional_configuration.js"
+    ]
+  },
+  "controls": {
+    "navigation": true,
+    "reload": true
+  }
+}

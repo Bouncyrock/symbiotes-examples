@@ -1,0 +1,206 @@
+body {
+    background-color: var(--ts-background-primary);
+    color: var(--ts-color-primary);
+    font-family: 'OptimusPrinceps', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
+
+h1 {
+    margin-bottom: 0.2em;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4%;
+    margin-bottom: 0.8em;
+}
+
+.label-desc {
+    color: var(--ts-color-secondary);
+    flex: 1;
+}
+
+.typed {
+    font-size: 1.7em !important;
+    font-family: 'Cutive Mono', monospace;
+}
+
+.hand-block {
+    font-size: 2.2em !important;
+    font-family: 'Caveat', cursive;
+}
+
+.hand-script {
+    font-size: 1.9em !important;
+    font-family: 'Fasthand', cursive;
+}
+
+#note {
+    font-size: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+#sent-indicator {
+    padding-top: 0.2em;
+    margin-right: -4em;
+    transition: all ease-in-out 0.1s;
+    opacity: 0;
+    z-index: 1;
+}
+
+#sent-indicator.show-sent {
+    margin-right: -0.5em;
+    transition: all ease-in-out 0.2s;
+    opacity: 1;
+}
+
+button, input {
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-primary);
+    font-family: 'OptimusPrinceps', sans-serif;
+
+    border: 1px solid var(--ts-accessibility-border);
+    border-radius: 4px;
+    font-size: 1.2em;
+
+    transition: ease-in-out 0.1s;
+}
+
+button:hover, input:hover {
+    background-color: var(--ts-background-primary);
+    transition: ease-in-out 0.2s;
+}
+
+button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--ts-accessibility-focus);
+    outline-offset: -1px;
+    background-color: var(--ts-background-primary);
+    transition: outline-color 0s;
+}
+
+button {
+    background-color: var(--ts-button-background);
+}
+
+button:hover {
+    background-color: var(--ts-button-hover);
+}
+
+button:focus-visible {
+    background-color: var(--ts-button-hover);
+}
+
+textarea {
+    flex-grow: 1;
+    min-height: 8em;
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-primary);
+    font-size: 1em;
+
+    border: 1px solid var(--ts-accessibility-border);
+    border-radius: 4px;
+
+    transition: ease-in-out 0.1s;
+}
+
+textarea:hover {
+    background-color: var(--ts-background-secondary);
+    transition: ease-in-out 0.2s;
+}
+
+textarea:focus-visible {
+    outline: 3px solid var(--ts-accessibility-focus);
+    outline-offset: -1px;
+    transition: outline-color 0s;
+}
+
+select {
+    flex: 4;
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-primary);
+    font-size: 1.2em;
+    font-family: 'OptimusPrinceps', sans-serif;
+
+    border: 1px solid var(--ts-accessibility-border);
+    border-radius: 4px;
+
+    height: auto;
+
+    transition: ease-in-out 0.1s;
+}
+
+select:hover {
+    background-color: var(--ts-background-primary);
+    transition: ease-in-out 0.2s;
+}
+
+select:focus-visible {
+    outline: 3px solid var(--ts-accessibility-focus) !important;
+    outline-offset: -1px;
+    background-color: var(--ts-background-primary);
+    transition: outline-color 0s;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+/*vuplex dropdown styling*/
+vuplex-dropdown {
+    transform: translateY(3px);
+    padding: 0;
+    background-color: var(--ts-background-secondary) !important;
+    border-color: var(--ts-accessibility-border) !important;
+    border-radius: 4px;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+vuplex-dropdown-option {
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-primary) !important;
+    transition: background-color 0.1s ease-in-out;
+}
+
+vuplex-dropdown-option:hover, vuplex-dropdown-option[selected] {
+    background-color: var(--ts-background-tertiary) !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/*scrollbar styling*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ts-background-primary);
+    transition: ease-in-out 0.1s;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.2s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.1s;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ts-color-secondary);
+    transition: ease-in-out 0.2s;
+}

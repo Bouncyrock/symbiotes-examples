@@ -1,0 +1,111 @@
+body {
+    background-color: var(--ts-background-primary);
+    color: var(--ts-color-primary);
+    font-family: 'OptimusPrinceps', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 0.8em;
+}
+
+.label-desc {
+    color: var(--ts-color-secondary);
+    flex: 1;
+}
+
+.field-title {
+    text-align: right;
+    flex-shrink: 0;
+    font-size: 1.2em;
+    width: 3em;
+    color: var(--ts-color-secondary);
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.result {
+    font-size: 2em;
+}
+
+button, input {
+    background-color: var(--ts-background-secondary);
+    color: var(--ts-color-primary);
+    font-family: 'OptimusPrinceps', sans-serif;
+
+    border: 1px solid var(--ts-accessibility-border);
+    border-radius: 4px;
+    font-size: 1.2em;
+    flex-grow: 1;
+
+    transition: ease-in-out 0.1s;
+}
+
+button:hover, input:hover {
+    background-color: var(--ts-background-primary);
+    transition: ease-in-out 0.2s;
+}
+
+button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--ts-accessibility-focus);
+    outline-offset: -1px;
+    background-color: var(--ts-background-primary);
+    transition: outline-color 0s;
+}
+
+button {
+    background-color: var(--ts-button-background);
+    flex: 1;
+}
+
+button:hover {
+    background-color: var(--ts-button-hover);
+}
+
+button:focus-visible {
+    background-color: var(--ts-button-hover);
+}
+
+/*scrollbar styling*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ts-background-primary);
+    transition: ease-in-out 0.1s;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.2s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--ts-background-secondary);
+    transition: ease-in-out 0.1s;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ts-color-secondary);
+    transition: ease-in-out 0.2s;
+}

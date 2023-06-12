@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Handouts</title>
+    <link rel="stylesheet" href="notes.css">
+    <script src="notes.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+    </style>
+</head>
+
+<body>
+    <div id="draft-note-container" class="hidden">
+        <h1 style="margin-top: 0">Draft Note</h1>
+        <div class="content-row">
+            <textarea id="note-input" placeholder="Note Content" oninput="updatePreview()" maxlength="470"></textarea>
+        </div>
+        <div class="content-row">
+            <label class="label-desc" for="style-select">Style:</label><select id="style-select" onchange="selectStyle()">
+                <option value="plain">Plain</option>
+                <option value="typed">Typed</option>
+                <option value="hand-block">Handwritten (Block)</option>
+                <option value="hand-script">Handwritten (Script)</option>
+            </select>
+        </div>
+        <div class="content-row">
+            <label class="label-desc" for="recipient-select">Recipient:</label><select id="recipient-select"><option value="All">All</option></select>
+        </div>
+        <div class="content-row">
+            <span style="flex-grow: 1"></span><span id="sent-indicator">Sent</span><button style="z-index: 10" onclick="sendNote()">Send</button>
+        </div>
+    </div>
+    <h1 style="margin-top: 0">Note</h1>
+    <div id="note" class="note"></div>
+    <img id="img-handout" class="hidden"></img>
+</body>
+</html>
