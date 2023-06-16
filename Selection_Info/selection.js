@@ -21,7 +21,7 @@ async function getSelection() {
                 positions[creatureInfo.id] = creatureInfo.position;
                 let creatureCard = document.getElementById("creature-template").content.firstElementChild.cloneNode(true);
                 creatureCard.dataset.creatureId = creatureInfo.id;
-                creatureCard.querySelector(".creature-name").textContent = creatureInfo.alias;
+                creatureCard.querySelector(".creature-name").textContent = creatureInfo.name;
                 creatureCard.querySelector(".creature-hp").textContent = creatureInfo.hp.value + " / " + creatureInfo.hp.max;
                 document.getElementById("individuals-container").appendChild(creatureCard);
                 document.getElementById("group-hp").textContent = summedCurHp + " / " + summedMaxHp;
@@ -29,7 +29,6 @@ async function getSelection() {
                 TS.contentPacks.findBoardObjectInPacks(creatureInfo.morphs[creatureInfo.activeMorphIndex].boardAssetId, contentPacks).then((foundContent) => {
                     let boardObject = foundContent.boardObject;
 
-                    creatureCard.querySelector(".creature-name").textContent = boardObject.name;
                     TS.contentPacks.createThumbnailElementForBoardObject(boardObject, 128).then((thumbnail) => {
                         creatureCard.prepend(thumbnail);
                     });
@@ -79,7 +78,9 @@ function displayDistance(positions) {
 }
 
 function clickCard(element) {
-    TS.creatures.getMoreInfo([element.dataset.creatureId]).then(TS.creatures.createBlueprintLink).then(TS.urls.submit).catch(console.error);
+    TS.creatures.getMoreInfo([element.dataset.creatureId]).then((info) => {
+        TS.creatures.createBlueprint(info[0]).then(TS.urls.submit);
+    }).catch(console.error);
 }
 
 function onStateChangeEvent(msg) {

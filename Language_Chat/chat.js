@@ -32,7 +32,7 @@ function sendMessage() {
                     //if the player is us, send a special message with some more info
                     //we could instead also send to "gms" as target so all GMs see this special message. this would however also
                     //require us to filter out all GMs from the other message, otherwise they'd get two messages
-                    TS.chat.send(language + "\": " + messageText, player.id).catch(console.error);
+                    TS.chat.send("\"" + language + "\": " + messageText, player.id).catch(console.error);
                     //this call can fail if the combined length of the message text + language name exceeds 400 characters. This should be handled and shown in UI, but for simplicity's sake we won't be doing that in this example. It can only fail here as the other messages are all limited to the message text length, which is capped to 370
                 }
                 else {

@@ -16,6 +16,7 @@
   "environment": {
     "webViewBackgroundColor": "#000000",
     "extras": [
+      "fonts",
       "icons",
       "colorStyles"
     ]

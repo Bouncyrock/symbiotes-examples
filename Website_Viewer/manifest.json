@@ -3,12 +3,12 @@
     "name": "Website Viewer",
     "entryPoint": "https://talespire.com",
     "license": "CC0",
+    "controls": {
+        "navigation": true,
+        "reload": true
+    },
     "environment": {
         "webViewBackgroundColor": "#1F1F1F",
-        "controls": {
-            "navigation": true,
-            "reload": true
-        },
         "extras": [
             "/myCustomInjectedScript.js",
             "/myCustomInjectedStyles.css"
