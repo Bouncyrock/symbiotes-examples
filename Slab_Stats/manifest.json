@@ -2,6 +2,7 @@
   "manifestVersion": 1,
   "name": "Slab Stats",
   "entryPoint": "/slab_stats.html",
+  "version": "0.1",
   "api": {
     "version": "0.1",
     "subscriptions": {

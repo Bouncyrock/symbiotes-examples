@@ -2,6 +2,7 @@
   "manifestVersion": 1,
   "name": "Generic Character Sheet",
   "entryPoint": "/generic_sheet.html",
+  "version": "0.1",
   "descriptionFilePath": "/readme.md",
   "api": {
     "version": "0.1",

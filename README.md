@@ -16,7 +16,7 @@ Each Symbiote should be in its own folder and contain one `manifest.json`.
 
 The following is a list of which features are shown off in which examples.
 
-- TaleSpire theme colors and fonts are used in all examples utilizing local webpages (that are completely stored on disk instead of online on some server): [Generic Character Sheet](Generic_Sheet/), [Language Chat](Language_Chat/), [Notes Handout](Notes_Handout/), [Dice Roller](Dice_Roller/),[Slab Stats](Slab_Stats/), [Selection Info](Selection_Info/)
+- TaleSpire theme colors and fonts are used in all examples utilizing local webpages (that are completely stored on disk instead of online on some server): [Generic Character Sheet](Generic_Sheet/), [Language Chat](Language_Chat/), [Notes Handout](Notes_Handout/), [Dice Roller](Dice_Roller/), [Slab Stats](Slab_Stats/), [Selection Info](Selection_Info/)
 - TaleSpire UI Icons: [Generic Character Sheet](Generic_Sheet/), [Slab Stats](Slab_Stats/), [Selection Info](Selection_Info/)
 - Local Storage: [Generic Character Sheet](Generic_Sheet/), [Language Chat](Language_Chat/)
 - Dice Rolls: [Generic Character Sheet](Generic_Sheet/), [Dice Roller](Dice_Roller/)
